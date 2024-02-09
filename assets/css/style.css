@@ -641,6 +641,10 @@ a:hover {
 .work-img img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 230px;
+  max-height: 230px;
 }
 
 .box-link
