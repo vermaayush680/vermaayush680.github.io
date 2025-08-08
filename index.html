@@ -2,405 +2,549 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Verma</title>
 
-  <title>Ayush Verma projects</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <link href="assets/img/favicon.png" rel="icon">
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 
 </head>
 
 <body>
 
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
+  <main>
 
-      <h1 class="logo"><a href="index.html">Ayush Verma</a></h1>
+    <aside class="sidebar" data-sidebar>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="#home">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About Me</a></li>
-          <li><a class="nav-link scrollto" href="#skills">Skills</a></li>
-          <li><a class="nav-link scrollto" href="#work">Projects</a></li>
-          <li><a target="_blank" class="resume nav-link" href="assets\Ayush Verma Resume.pdf"
-              download="Ayush Verma Resume.pdf">Resume</a></li>
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Ayush Verma" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Ayush Verma">Ayush Verma</h1>
+
+          <p class="title">Full Stack Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:ayush.verma.careers@gmail.com" class="contact-link">ayush.verma.careers@gmail.com</a>
+              <button class="copy-btn" id="copyEmailBtn" title="Copy Email">
+                <span id="copyEmailIcon">📋</span>
+              </button>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+91 8840463324</a>
+              <button class="copy-btn" id="copyPhoneBtn" title="Copy Phone">
+                <span id="copyPhoneIcon">📋</span>
+              </button>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2000-08-02">August 02, 2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Hyderabad, India</address>
+            </div>
+
+          </li>
+
         </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/vermaayush680/" target="_blank" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/vermaayush680/" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/thereadermonk/" target="_blank" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <div class="main-content">
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+        </ul>
+
       </nav>
 
-    </div>
-  </header>
+      <article class="about  active" data-page="about">
 
-  <div id="home" class="home route bg-image" style="background-image: url(assets/img/main-image1.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="home-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <h1 class="home-title mb-4">I am Ayush Verma</h1>
-          <p class="home-subtitle"><span class="typed"
-              data-typed-items="NodeJs, ExpressJs, MySQL, AWS, Python, MongoDB"></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
 
-  <main id="main">
+        <section class="about-text">
+          <p>
+            Hey there! I'm Ayush Verma, a passionate Software Development Engineer with a knack for crafting innovative
+            solutions to complex challenges. My journey began at Dr M. C. Saxena College of Engineering and Technology,
+            where I honed my skills in Computer Science, graduating with a stellar CGPA of 8.1 out of 10.
+          </p>
 
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                About
-              </h3>
-              <p class="subtitle-a">
-                A little info about me!!
+          <p>
+
+            My professional voyage led me to exciting opportunities, including my current role as a Software Development
+            Engineer at Flowace, where I've spearheaded projects like optimizing a high-performance Content Delivery
+            Network on AWS, slashing costs by 96%, and architecting efficient migration solutions for AWS RDS databases.
+          </p>
+        </section>
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What I do</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/backend.svg" alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Backend Development</h4>
+
+                <p class="service-item-text">
+                  I create efficient and scalable backend systems that power web and mobile applications.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/frontend.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+
+                <p class="service-item-text">
+                  I build responsive and user-friendly websites that meet the needs of my clients.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/database.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Database Management</h4>
+
+                <p class="service-item-text">
+                  I specialize in designing and managing databases to ensure data integrity and accessibility.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/servers.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Server Management</h4>
+
+                <p class="service-item-text">
+                  I ensure the smooth operation of servers and applications, optimizing performance and security.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+
+              <div class="timeline-title-row">
+                <h4 class="h4 timeline-item-title">Dr. A.P.J. Abdul Kalam Technical University</h4>
+                <span class="timeline-years">June 2018 — June 2022</span>
+              </div>
+              <span>Bachelor in Technology</span>
+
+              <p class="timeline-text">
+                I studied bachelor of technology in various aspects of technology, including programming, data
+                structures, and algorithms.
               </p>
-              <div class="line-mf"></div>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
+
+            <h3 class="h3">Experience</h3>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-12">
-                      <div class="title-box-2">
-                        <h5 class="title-left">
-                          Basic Info
-                        </h5>
-                      </div>
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Ayush Verma</span></p>
-                        <p><span class="title-s">Email: </span> <span>vermaayush680@gmail.com</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="skill-mf">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Social Profiles
-                      </h5>
-                    </div>
-                    <div class="social-img-1">
-                      <a target="_blank" href="https://www.kaggle.com/ayushv322"><img src="assets\img\kaggle.png"
-                          height="70vw"></a>
-                      <a target="_blank" href="https://www.linkedin.com/in/vermaayush680/"><img
-                          src="assets\img\linkedin.png" height="65vw"></a>
 
-                      <a target="_blank" href="https://github.com/vermaayush680"><img src="assets\img\github.png"
-                          height="70vw"></a>
-                      <a target="_blank" href="https://www.instagram.com/thereadermonk/"><img src="assets\img\insta.png"
-                          height="70vw"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="about-me pt-3 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About me
-                      </h5>
-                    </div>
-                    <p class="lead">
+          <ol class="timeline-list">
 
-                      Ayush Verma is a backend Software Engineer at Flowace. He graduated from Dr. M. C. Saxena College
-                      of Engineering and Technology with a B.Tech degree in Computer Science in 2022.
-                      <br><br>
-                      He has over 1.5+ years of full-time experience and 1.5 years of internship experience as well. He is experienced in NodeJs, ExpressJs, MySQL, AWS, Python, Django, Flask, and MongoDB, and is open to working on any tech stack.
-                      <br><br>
-                      In pursuit of self-employment, Ayush currently resides in Lucknow, Uttar Pradesh, and spends time with his friends and books.
-                      <!-- I am Ayush Verma, a final year student pursuing Bachelor's of Technology in Computer Science and Engineering and will be graduating in 2022.
-                      <br><br>
-                      I have internship experience of over an year in Python and Django and over 4 months of internship experience in Data Science.
-                      <br><br>  
-                      I am actively looking for roles to contribute in the field of Software Development or Data Science and tackle real-world problems first-hand. -->
-                    </p>
-                  </div>
-                </div>
+            <li class="timeline-item">
+
+              <div class="timeline-title-row">
+                <h4 class="h4 timeline-item-title">Lloyds Technology Centre</h4>
+
+                <span class="timeline-years">June 2024 - Present</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+              <span>Software Engineer</span>
 
-    <section id="skills" class="skills-mf pt-5 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Skills
-              </h3>
-              <p class="subtitle-a">
-                A list of all my skills and technologies I use!!
+              <p class="timeline-text">
+                At Lloyds Technology Centre, I contributed to the delivery of high-quality software solutions by
+                implementing best practices in testing, API development, and security. My work focused on improving
+                system reliability, maintainability, and performance while collaborating with cross-functional teams to
+                meet business goals, all within the boundaries of strict confidentiality agreements.
+                <br>
+                <span class="timeline-tech"><strong>Tech Stack:</strong> Java, Spring Boot, JUnit, REST APIs, React,
+                  Node.js, CI/CD, Git, Security Tools</span>
               </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-code-slash"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">NodeJs</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-braces"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">ExpressJs</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-server"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">MySQL</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-cloud"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">AWS</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-code-slash"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Python</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-code-square"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Flask</h2>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-diagram-3"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Django</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-collection-fill"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">MongoDB</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-hdd-fill"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Redis</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-cloud"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">GCP</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-truck"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Docker</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-bezier2"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Firebase</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="work" class="projects-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Projects
-              </h3>
-              <p class="subtitle-a">
-                My top projects.
+            </li>
+
+            <li class="timeline-item">
+
+              <div class="timeline-title-row">
+                <h4 class="h4 timeline-item-title">Flowace Technologies</h4>
+
+                <span class="timeline-years">April 2023 - June 2024</span>
+              </div>
+              <span>Software Development Engineer 1</span>
+
+              <p class="timeline-text">
+                At Flowace Technologies, I contributed to the delivery of high-quality software solutions by
+                implementing best practices in testing, API development, and security. My work focused on improving
+                system reliability, maintainability, and performance while collaborating with cross-functional teams to
+                meet business goals, all within the boundaries of strict confidentiality agreements.
+                In my role at Flowace Technologies, I engineered and optimized scalable cloud solutions, automated
+                complex data migrations, and enhanced system reliability for global clients. My work emphasized
+                performance, cost efficiency, and secure API design, all while maintaining strict confidentiality and
+                collaborating closely with cross-functional teams.
+                <br>
+                <span class="timeline-tech"><strong>Tech Stack:</strong> AWS, CloudFront, Lambda@Edge, Python, Node.js,
+                  REST APIs, CI/CD, Git, SQL, Cost Optimization</span>
               </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a target="_blank" href="https://african-wildlife.herokuapp.com/" data-gallery="projectsGallery"
-                class="projects-lightbox">
-                <div class="work-img">
-                  <img src="assets\img\project-1.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Socio Geeks: A social media platform for geeks</h2>
-                    <br>
-                    <div class="box-link">
-                      <a target="_blank" href="https://github.com/vermaayush680/SocioGeeks"><i
-                          class="link1 bi bi-github"></i></a>
-                      <a target="_blank" href="https://socio-geeks-frontend.vercel.app/"><i class="link1 bi bi-boxes"></i></a>
-                    </div>
-                    <br>
-                    <span class="texty">SocioGeeks is a platform for geeks to convey their ideas to the world of geeks.<br><br>
-                      The frontend is designed using <b>ReactJs</b>.<br> The backend is designed using <b>NodeJs</b> and <b>ExpressJs</b> and is hosted on <b>Vercel</b>
-                    </span>
-                  </div>
-                </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <div class="timeline-title-row">
+                <h4 class="h4 timeline-item-title">Zunpulse</h4>
+
+                <span class="timeline-years">August 2022 - February 2023</span>
               </div>
-            </div>
-          </div>
+              <span>Software Development Engineer 1</span>
 
-          <div class="col-md-4">
-            <div class="work-box">
-              <a target="_blank" href="https://github.com/vermaayush680/Hamoye_capstone_project_smote" data-gallery="projectsGallery"
-                class="projects-lightbox">
-                <div class="work-img">
-                  <img src="assets\img\project-2.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Invasive Ductal Carcinoma Breast Cancer Detection</h2>
-                    <br>
-                    <div class="box-link">
-                      <a target="_blank" href="https://curecancer.herokuapp.com/"><i class="link1 bi bi-boxes"></i></a>
-                      <a target="_blank"
-                        href="https://github.com/vermaayush680/Final-Year-Project/blob/main/Breast%20Cancer%20Analysis.ipynb"><i
-                          class="link1 bi bi-github"></i></a>
-                      <a target="_blank" href="https://cancercure.herokuapp.com/"><i class="link1 bi bi-boxes"></i></a>
-                    </div>
-                    <br>
-                    <span class="texty">This project was part of my Final Year Project.This was a group project where we
-                      used <b>Logistic Regression Model</b> <i>(F1-Score: 0.97)</i> and <b>VGG16 Deep Learning Mode</b>l
-                      <i>(F1-Score: 0.91)</i> for Breast Cancer Detection in tabular and image form.
-                    </span>
+              <p class="timeline-text">
+                At Zunpulse, I played a key role in developing and optimizing IoT and voice assistant solutions,
+                focusing on scalable backend systems, real-time device state management, and seamless integration with
+                smart home platforms. My responsibilities included designing secure APIs, orchestrating cloud-based
+                services, and collaborating with cross-functional teams to deliver impactful features, all while
+                adhering to strict confidentiality agreements and industry best practices.
+                <br>
+                <span class="timeline-tech"><strong>Tech Stack:</strong> Node.js, ExpressJS, MongoDB, MySQL, Redis,
+                  RabbitMQ, Docker, Firebase, Google Cloud Platform, Python, Flask</span>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My Tech Stack</h3>
+
+          <ul class="skills-list content-card tech-stack-icons">
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-nodejs.svg" alt="Node.js" title="Node.js" class="tech-icon" width="48"
+                height="48">
+              <span>Node.js</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-java.svg" alt="Java" title="Java" class="tech-icon" width="60" height="48">
+              <span>Java</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-python.png" alt="Python" title="Python" class="tech-icon" width="48"
+                height="48">
+              <span>Python</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-react.png" alt="React" title="React" class="tech-icon" width="7-"
+                height="48">
+              <span>React</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-mysql.png" alt="MySQL" title="MySQL" class="tech-icon" width="48"
+                height="48">
+              <span>MySQL</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-mongodb.png" alt="MongoDB" title="MongoDB" class="tech-icon" width="48"
+                height="48">
+              <span>MongoDB</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-docker.png" alt="Docker" title="Docker" class="tech-icon" width="48"
+                height="48">
+              <span>Docker</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-gcp.png" alt="Google Cloud Platform" title="Google Cloud Platform"
+                class="tech-icon" width="48" height="48">
+              <span>GCP</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-aws.png" alt="AWS" title="AWS" class="tech-icon" width="48" height="48">
+              <span>AWS</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-redis.png" alt="Redis" title="Redis" class="tech-icon" width="48"
+                height="48">
+              <span>Redis</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-vite.png" alt="Vite" title="Vite" class="tech-icon" width="48" height="48">
+              <span>Vite</span>
+            </li>
+            <li class="skills-item tech-card">
+              <img src="./assets/images/logo-rabbitmq.png" alt="RabbitMQ" title="RabbitMQ" class="tech-icon" width="48"
+                height="48">
+              <span>RabbitMQ</span>
+            </li>
+            <!-- Add more tech stack icons as needed -->
+          </ul>
+
+        </section>
+
+      </article>
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://socio-geeks-frontend.vercel.app/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-md-4">
-            <div class="work-box">
-              <a target="_blank" href="https://african-wildlife.herokuapp.com/" data-gallery="projectsGallery"
-                class="projects-lightbox">
-                <div class="work-img">
-                  <img src="assets\img\project-3.jpg" alt="" class="img-fluid">
-                </div>
+                  <img src="./assets/images/project-1.png" alt="finance" loading="lazy" width="80" height="80">
+                </figure>
+
+                <h3 class="project-title">Socio Geeks</h3>
+
               </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Trust of Helping Hands NGO Website</h2>
-                    <br>
-                    <div class="box-link">
-                      <a target="_blank" href="https://trustofhelpinghands.com/"><i class="link1 bi bi-boxes"></i></a>
-                    </div>
-                    <br>
-                    <span class="texty">A website to display the social work of the trust. The website has a working
-                      <b>Contact Form</b> and a Donation page configured with RazorPay.
-                      The website is built using HTML, CSS and JavaScript and is hosted on Github Pages.
-                    </span>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://no-as-a-service-frontend.vercel.app/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-        </div>
-      </div>
-    </section>
+                  <img src="./assets/images/project-3.png" alt="finance" loading="lazy" width="80" height="80">
+                </figure>
 
-  </main><!-- End #main -->
-  <hr style="color: #f1f1f1;">
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <div class="credits">
-              Designed by <a target="_blank" href="https://www.linkedin.com/in/vermaayush680/">Ayush Verma</a>
-            </div>
-          </div>
-        </div>
-      </div>
+                <h3 class="project-title">No as a Service</h3>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://husky-demand-portal.vercel.app/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="finance" loading="lazy" width="80" height="80">
+                </figure>
+
+                <h3 class="project-title">Huskify</h3>
+
+              </a>
+            </li>
+
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
     </div>
-  </footer>
 
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
